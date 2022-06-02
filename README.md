@@ -12,11 +12,17 @@ For example:
 use function Alley\WP\add_filter_side_effect;
 
 add_filter_side_effect(
-    'wp_insert_post_data',
-    function ( $data, $postarr ) {
-        // Do something before the post is saved.
+    'rest_pre_insert_post',
+    function ( $prepared_post, $request ) {
+        // Do something before the post is saved, like...
+        $language_slug    = $request['lang'];
+        $default_category = $this->get_custom_default_language_category( $language_slug );
+
+        if ( $default_category ) {
+            add_filter( 'pre_option_default_category', fn() => $default_category );
+        }
     },
     10,
-    2
+    2,
 );
 ```
