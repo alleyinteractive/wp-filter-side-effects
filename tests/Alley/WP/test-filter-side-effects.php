@@ -18,7 +18,7 @@ use Mantle\Testkit\Test_Case;
 /**
  * Tests for filter side-effects.
  */
-class Test_Filter_Side_Effects extends Test_Case {
+final class Test_Filter_Side_Effects extends Test_Case {
 	/**
 	 * Prefixed test filter name.
 	 *
