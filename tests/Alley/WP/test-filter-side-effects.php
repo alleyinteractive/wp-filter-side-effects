@@ -24,28 +24,28 @@ final class Test_Filter_Side_Effects extends Test_Case {
 	 *
 	 * @var string
 	 */
-	protected const TEST_FILTER = 'alley_test_filter';
+	private const TEST_FILTER = 'alley_test_filter';
 
 	/**
 	 * A value known to not be the same as DATA2, for comparisons.
 	 *
 	 * @var string
 	 */
-	protected const DATA1 = 'data1';
+	private const DATA1 = 'data1';
 
 	/**
 	 * A value known to not be the same as DATA1, for comparisons.
 	 *
 	 * @var string
 	 */
-	protected const DATA2 = 'data2';
+	private const DATA2 = 'data2';
 
 	/**
 	 * A ready-made Mock_Action instance that might be enough for most tests.
 	 *
 	 * @var Mock_Action
 	 */
-	protected Mock_Action $mock_action;
+	private Mock_Action $mock_action;
 
 	/**
 	 * Set up.
@@ -104,7 +104,7 @@ final class Test_Filter_Side_Effects extends Test_Case {
 	 * @param string|array $args Filtered value and additional arguments, if any.
 	 * @return mixed Filtered value.
 	 */
-	protected function apply_test_filter( $args ) {
+	private function apply_test_filter( $args ) {
 		$args = (array) $args;
 
 		// This filter name is prefixed.
