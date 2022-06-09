@@ -10,6 +10,9 @@
         }
     ],
     "autoload": {
+        "classmap": [
+            "src/"
+        ],
         "files": [
             "src/Alley/WP/filter-side-effects.php"
         ]
