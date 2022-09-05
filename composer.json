@@ -10,9 +10,6 @@
     }
   ],
   "autoload": {
-    "classmap": [
-      "src/"
-    ],
     "files": [
       "src/Alley/WP/filter-side-effects.php"
     ]
@@ -30,7 +27,7 @@
   "require-dev": {
     "alleyinteractive/alley-coding-standards": "^0.3",
     "friendsofphp/php-cs-fixer": "^3.8",
-    "mantle-framework/testkit": "^0.2"
+    "mantle-framework/testkit": "^0.5"
   },
   "scripts": {
     "fixer": "php-cs-fixer -v fix --allow-risky=yes",
@@ -40,7 +37,12 @@
   },
   "extra": {
     "wordpress-autoloader": {
-      "inject": true
+      "autoload": {
+        "Alley\\": "src/Alley/"
+      },
+      "autoload-dev": {
+        "Alley\\": "tests/Alley/"
+      }
     }
   }
 }
