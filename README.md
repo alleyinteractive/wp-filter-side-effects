@@ -39,7 +39,7 @@ add_filter_side_effect(
 
 ### License
 
-[GPL-2.0-or-later](https://github.com/alleyinteractive/wp-caper/blob/main/LICENSE)
+[GPL-2.0-or-later](https://github.com/alleyinteractive/wp-filter-side-effects/blob/main/LICENSE)
 
 ### Maintainers
 
