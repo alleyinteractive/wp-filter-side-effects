@@ -11,7 +11,7 @@
   ],
   "autoload": {
     "files": [
-      "src/Alley/WP/filter-side-effects.php"
+      "src/alley/wp/filter-side-effects.php"
     ]
   },
   "config": {
