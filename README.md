@@ -4,7 +4,15 @@
 
 The callback function can return `void` or return a value. If the callback function returns a value, that value will be ignored, not passed back to the filter. Filter side effects thus behave like `add_action()` callbacks and can be used in situations where a call to `apply_filters()` signals that some behavior needs to occur, but no convenient action exists to run it.
 
-For example:
+## Installation
+
+Install the latest version with:
+
+```bash
+$ composer require alleyinteractive/wp-filter-side-effects
+```
+
+## Basic usage
 
 ```php
 <?php
@@ -26,3 +34,13 @@ add_filter_side_effect(
     2,
 );
 ```
+
+## About
+
+### License
+
+[GPL-2.0-or-later](https://github.com/alleyinteractive/wp-filter-side-effects/blob/main/LICENSE)
+
+### Maintainers
+
+[Alley Interactive](https://github.com/alleyinteractive)
