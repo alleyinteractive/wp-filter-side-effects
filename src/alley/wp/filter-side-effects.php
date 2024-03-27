@@ -19,10 +19,12 @@ namespace Alley\WP;
  * @param callable $function_to_add Callback.
  * @param int      $priority        Priority.
  * @param int      $accepted_args   Accepted arguments.
- * @return true|void
+ * @return callable
  */
-function add_filter_side_effect( $tag, $function_to_add, $priority = 10, $accepted_args = 1 ) {
-	return add_filter( $tag, generate_filter_side_effect( $function_to_add ), $priority, $accepted_args );
+function add_filter_side_effect( $tag, $function_to_add, $priority = 10, $accepted_args = 1 ): callable {
+	$fn = generate_filter_side_effect( $function_to_add );
+	add_filter( $tag, $fn, $priority, $accepted_args );
+	return $fn;
 }
 
 /**
