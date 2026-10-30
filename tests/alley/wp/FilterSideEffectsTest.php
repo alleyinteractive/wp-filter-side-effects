@@ -1,6 +1,6 @@
 <?php
 /**
- * Class file for Test_Filter_Side_Effects
+ * Class file for FilterSideEffectsTest
  *
  * (c) Alley <info@alley.com>
  *
@@ -13,12 +13,12 @@
 namespace Alley\WP;
 
 use Mantle\Testing\Mock_Action;
-use Mantle\Testkit\Test_Case;
+use Mantle\Testkit\TestCase;
 
 /**
  * Tests for filter side-effects.
  */
-final class Test_Filter_Side_Effects extends Test_Case {
+final class FilterSideEffectsTest extends TestCase {
 	/**
 	 * Prefixed test filter name.
 	 *

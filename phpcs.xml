@@ -36,7 +36,7 @@
         </properties>
     </rule>
 
-    <!-- Use a test-*.php class naming convention. -->
+    <!-- Test classes follow the PHPUnit file naming convention. -->
     <rule ref="WordPress.Files.FileName.InvalidClassFileName">
         <exclude-pattern>tests/</exclude-pattern>
     </rule>
