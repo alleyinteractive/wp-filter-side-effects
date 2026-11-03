@@ -25,21 +25,28 @@
     "php": "^8.0"
   },
   "require-dev": {
-    "alleyinteractive/alley-coding-standards": "^1.0.0",
+    "alleyinteractive/alley-coding-standards": "^2.0",
     "friendsofphp/php-cs-fixer": "^3.8",
-    "mantle-framework/testkit": "^0.5"
+    "mantle-framework/testkit": "^1.0"
   },
   "scripts": {
     "fixer": "php-cs-fixer -v fix --allow-risky=yes",
     "phpcbf": "phpcbf",
     "phpcs": "phpcs",
-    "phpunit": "phpunit"
+    "phpunit": "phpunit",
+    "test": [
+      "@phpcs",
+      "@phpunit"
+    ]
   },
   "extra": {
     "wordpress-autoloader": {
       "autoload-dev": {
         "Alley\\": "tests/alley/"
       }
+    },
+    "branch-alias": {
+      "dev-main": "2.x-dev"
     }
   }
 }
